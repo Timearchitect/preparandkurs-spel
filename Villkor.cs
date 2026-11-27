@@ -1,12 +1,36 @@
+public class Test
+{
+  public string getText()
+  {
+    return "hejsan";
+  }
+}
+
 class Villkor
 {
 
 
   public static void Main(String[] args)
   {
+
     Console.Clear();   // rensar consolen
 
+    string text4 =
+@"
+          ( ( ( ( ) ) ) )
+           (( (( )) ))
+             ((   ))
+               (())
+                II
+               (())
+             ((   ))
+           (( (( )) ))
+          ( ( ( ( ) ) ) )";
+    Console.WriteLine(text4);
+    Test? t = null;
+    System.Console.WriteLine(t?.getText());
     // villkor , conditions
+    Console.WriteLine(int.Parse(" 10  "));  // == jämnför
 
     Console.WriteLine(1 + 1 == 2);  // == jämnför
     String namn = "Kung";
@@ -27,7 +51,9 @@ class Villkor
 
     Console.WriteLine(1 != -35); // inte likamed
 
+    String? x2 = "I am a guy";
 
+    Console.WriteLine(x2 ?? "default");
 
     // if satser , if statements
     int age3 = 12;
@@ -44,67 +70,74 @@ class Villkor
           System.Console.WriteLine("FEL!!!");
         } */
 
+    System.Console.WriteLine(1.0 / 2.0);
+    System.Console.WriteLine(1 / 2);
 
+
+    System.Console.WriteLine(12.ToString());
 
     Console.WriteLine("vilken titel har du? (drottning/prinsessa eller adel)");
     string rawInput = Console.ReadLine();
     string titel = rawInput.ToLower();
     Console.WriteLine("raw: " + rawInput);
     Console.WriteLine("lowered case: " + titel);
+    Console.WriteLine();
 
-/*     if (titel == "drottning")
-    { // sant koder
-      Console.WriteLine("  Du är rikets härskarina!! ");
-    }
-    else
-    { //false koder
-      Console.WriteLine("Du är ingen Drottning");
-          if (titel == "prinsessa")  // nästing
-          { // sant koder
-            Console.WriteLine("  Du är en prinsessa!! "); 
-          }
-          else
-          { //false koder
-            Console.WriteLine("Du är ingen prinsessa");
-              if (titel == "adel")  // nästing
-                { // sant koder
-                  Console.WriteLine("     Du är en adel!! "); 
-                }
-                else
-                { //false koder
-                  Console.WriteLine("     Du är pleb  ");
-                }
-          }
-    }
- */
+    Console.WriteLine($" min titel är: {titel} och är : {age3} gammal ");
+    /*     if (titel == "drottning")
+        { // sant koder
+          Console.WriteLine("  Du är rikets härskarina!! ");
+        }
+        else
+        { //false koder
+          Console.WriteLine("Du är ingen Drottning");
+              if (titel == "prinsessa")  // nästing
+              { // sant koder
+                Console.WriteLine("  Du är en prinsessa!! "); 
+              }
+              else
+              { //false koder
+                Console.WriteLine("Du är ingen prinsessa");
+                  if (titel == "adel")  // nästing
+                    { // sant koder
+                      Console.WriteLine("     Du är en adel!! "); 
+                    }
+                    else
+                    { //false koder
+                      Console.WriteLine("     Du är pleb  ");
+                    }
+              }
+        }
+     */
 
-/*     if (titel == "drottning")
-      Console.WriteLine("Du är rikets härskarina!! ");
-    else if (titel == "prinsessa")  // nästing
-      Console.WriteLine(" Du är en prinsessa!! ");
-    else if (titel == "adel")  // nästing
-      Console.WriteLine("  Du är en adel!! ");
-    else
-      Console.WriteLine("   Du är pleb  ");
- */
+    /*     if (titel == "drottning")
+          Console.WriteLine("Du är rikets härskarina!! ");
+        else if (titel == "prinsessa")  // nästing
+          Console.WriteLine(" Du är en prinsessa!! ");
+        else if (titel == "adel")  // nästing
+          Console.WriteLine("  Du är en adel!! ");
+        else
+          Console.WriteLine("   Du är pleb  ");
+     */
 
-switch (titel)
-{
-  case "drottning":
+
+
+
+    switch (titel)
+    {
+      case "drottning":
         Console.WriteLine(" härskarina!! ");
-  break;
-  case "prinsessa":
+        break;
+      case "prinsessa":
         Console.WriteLine(" prinsessa");
-  break;
-  case "adel":
+        break;
+      case "adel":
         Console.WriteLine(" adel!!");
-  break;
-  default:
+        break;
+      default:
         Console.WriteLine("Du är pleb");
-  break;
-}
-
-
+        break;
+    }
 
 
     /*
